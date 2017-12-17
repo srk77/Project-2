@@ -22,7 +22,7 @@
       background-image: url("/1.jpg");
       padding-top: 20px;
       /*background-color: #f1f1f1;*/
-      background-color:#1b2b44;
+      background-color: #1f314f;
       height: 100%;
     }
 
@@ -45,6 +45,10 @@
       height:400px;
     }
 
+    .btn{
+      background-color: #1f314f;
+    }
+
   </style>
 </head>
 <body>
@@ -59,11 +63,6 @@
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-
-      </ul>
-
     </div>
   </div>
 </nav>
@@ -77,24 +76,24 @@
     <div class="col-sm-8 text-center">
 
       <h1>Welcome</h1>
-      <!-- <p>This is website for managing tasks.</p> -->
+      <p>This is website for managing tasks.</p>
       <hr>
       <form action="index.php?page=accounts&action=login" method="POST">
 
       <!--<div class="container">-->
       <!-- <h5><b>Username</b></h5> -->
-      <label name="uname">Username:</label>
+      <label nmae="uname">Username:</label>
       <input type="email" placeholder="Enter Username" name="uname" required><br>
 
       <!-- <h5><b>Password</b></h5> -->
-      <label name="pws">Password:</label>
+      <label nmae="psw">Password:</label>
       <input type="password" placeholder="Enter Password" name="psw" required><br><br>
 
       <button type="submit" class="btn btn-primary">Login</button>
       <a class="btn btn-primary" href="index.php?page=accounts&action=register">Register</a>
       <!--</div>-->
 </form>
-    <!-- <h5><a href="index.php?page=accounts&action=register">Register</a></h5> -->
+  <!-- <h5><a href="index.php?page=accounts&action=register">Register</a></h5> -->
     </div>
     <div class="col-sm-2 sidenav">
     </div>
