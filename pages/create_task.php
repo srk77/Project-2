@@ -64,7 +64,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=accounts&action=back1">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
@@ -99,7 +99,7 @@
 
 <div class = "form-group">
 <label>Owner ID-</label>
-<input type="text" class="form-control" name="ownerid" value="<?php echo $_SESSION["userID"]; ?>">
+<input type="text" class="form-control" name="ownerid" value="<?php echo $_SESSION["userID"]; ?>" readonly>
 </div>
 <br><br>
 
@@ -139,7 +139,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+
 </footer>
 
 <script src="js/scripts.js"></script>

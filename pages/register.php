@@ -58,10 +58,6 @@
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-
-      </ul>
 
     </div>
   </div>
@@ -77,15 +73,15 @@
 <form action="index.php?page=accounts&action=store" method="post" id="form1" class = "form-inline">
     <div class = "form-group" align="center">
     <label>First name-</label>
-    <input type="text" class="form-control" name="fname" value=""><br>
+    <input type="text" class="form-control" name="fname" value="" required><br>
     </div><br><br>
     <div class = "form-group">
     <label>Last name-</label>
-    <input type="text" class="form-control" name="lname" value=""><br>
+    <input type="text" class="form-control" name="lname" value="" required><br>
     </div><br><br>
     <div class = "form-group">
     <label>Email ID-</label>
-    <input type="text" class="form-control" name="email" value=""><br>
+    <input type="email" class="form-control" name="email" value=""><br>
     </div><br><br>
     <div class = "form-group">
     <label>Phone No-</label>
@@ -101,7 +97,7 @@
     </div><br><br>
     <div class = "form-group">
     <label>Password-</label>
-    <input type="password" class="form-control" name="password" value=""><br>
+    <input type="password" class="form-control" name="password" value="" required><br>
     </div><br><br>
     <button type="submit" class="btn btn-primary" form="form1" value="Submit">Submit</button>
 </form>
