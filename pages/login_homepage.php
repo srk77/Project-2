@@ -20,8 +20,7 @@
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      /*background-color: #f1f1f1;*/
-      background-color: white;
+      background-color: #f1f1f1;
       height: 100%;
     }
 
@@ -62,7 +61,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=accounts&action=back1">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
@@ -86,7 +85,7 @@
     </div>
     <div class="col-sm-8 text-center">
 
-&nbsp&nbsp&nbsp<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
+&nbsp&nbsp&nbsp<h1><a href="index.php?page=tasks&action=all">Show Tasks</a></h1>
 </div>
 
 <div class="col-sm-2 sidenav">
