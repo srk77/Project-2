@@ -29,9 +29,7 @@ class accountsController extends http\controller
     public static function store()
     {
         $user = accounts::findUserbyEmail($_REQUEST['email']);
-        //echo 'hy';
         if ($user == FALSE) {
-            //echo 'in if';
             $user = new account();
             $user->email = $_POST['email'];
             $user->fname = $_POST['fname'];
@@ -44,17 +42,12 @@ class accountsController extends http\controller
             $user->save();
             header("Location: index.php?page=homepage&action=show");
         } else {
-            echo 'in else';
-            //You can make a template for errors called error.php
-            // and load the template here with the error you want to show.
-           // echo 'already registered';
-            //$error = 'already registered';
-            //self::getTemplate('error', $error);
+            $error = 'already registered';
+            self::getTemplate('error', $error);
         }
     }
     public static function edit()
     {
-        //echo $_REQUEST['uname'];
         $record = accounts::findOne($_REQUEST['id']);
         self::getTemplate('edit_account', $record);
     }
@@ -68,7 +61,6 @@ class accountsController extends http\controller
         $user->birthday = $_POST['birthday'];
         $user->gender = $_POST['gender'];
         $user->save();
-        //header("Location: index.php?page=accounts&action=");
         self::getTemplate('login_homepage', NULL);
     }
     public static function delete() {
@@ -82,7 +74,9 @@ class accountsController extends http\controller
         $user = accounts::findUserbyEmail($_REQUEST['uname']);
         //print_r($user);
         if ($user == FALSE) {
-            echo 'user not found';
+            $error = 'user not found';
+                self::getTemplate('error', $error);
+
         } else {
             if($user->checkPassword($_POST['psw']) == TRUE) {
                 //echo 'login';
@@ -93,14 +87,16 @@ class accountsController extends http\controller
                 //print_r($_SESSION);
                 self::getTemplate('login_homepage', NULL);
             } else {
-                echo 'password does not match';
+                $error = 'password does not match';
+                self::getTemplate('error', $error);
             }
         }
     }
-    
+
     public static function logout()
     {
       session_destroy();
+      $_SESSION=array();
       header('Location:index.php?page=homepage');
     }
 }

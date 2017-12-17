@@ -5,8 +5,15 @@ class tasksController extends http\controller
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
+        session_start();
+        if(key_exists('userID',$_SESSION)) {
         $record = todos::findOne($_REQUEST['id']);
         self::getTemplate('show_task', $record);
+        }
+        else {
+               $error = 'you must be logged in to view tasks';
+               self::getTemplate('error', $error);
+           }
     }
     //to call the show function the url is index.php?page=task&action=list_task
     public static function all()
@@ -20,7 +27,8 @@ class tasksController extends http\controller
                $records = todos::findTasksbyID($userID);
                self::getTemplate('all_tasks', $records);
            } else {
-               echo 'you must be logged in to view tasks';
+               $error = 'you must be logged in to view tasks';
+               self::getTemplate('error', $error);
            }
     }
     //to call the show function the url is called with a post to: index.php?page=task&action=create
@@ -38,7 +46,8 @@ class tasksController extends http\controller
     {
         $record = todos::findOne($_REQUEST['id']);
         self::getTemplate('edit_task', $record);
-    }
+        }
+
     //this would be for the post for sending the task edit form
     public static function store()
     {
@@ -51,7 +60,7 @@ class tasksController extends http\controller
           $record->duedate=$_POST['duedate'];
           $record->message=$_POST['message'];
           $record->isdone=$_POST['isdone'];
-          $record->save(); 
+          $record->save();
         }
         else{
           $record = todos::findOne($_REQUEST['id']);

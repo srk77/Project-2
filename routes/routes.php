@@ -30,7 +30,7 @@ class routes
         $route->controller = 'homepageController';
         $route->method = 'create';
         $routes[] = $route;
-        
+
         $route = new route();
         $route->http_method = 'POST';
         $route->action = 'logout';
@@ -38,8 +38,8 @@ class routes
         $route->controller = 'accountsController';
         $route->method = 'logout';
         $routes[] = $route;
-        
-        
+
+
         //This is an examole of the post for tasks to show a task
         //GET METHOD index.php?page=tasks&action=show
         $route = new route();
@@ -93,7 +93,7 @@ class routes
         $route->method = 'edit';
         $routes[] = $route;
         //return $routes;
-        
+
         // adding for update
         $route = new route();
         $route->http_method = 'POST';
@@ -102,7 +102,7 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'store';
         $routes[] = $route;
-        
+
         $route = new route();
         $route->http_method = 'POST';
         $route->action = 'delete';
@@ -110,7 +110,7 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'delete';
         $routes[] = $route;
-        
+
         //adding for create
         $route = new route();
         $route->http_method = 'GET';
@@ -119,7 +119,7 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'create';
         $routes[] = $route;
-        
+
          $route = new route();
          $route->http_method = 'POST';
          $route->action = 'delete';
@@ -127,7 +127,7 @@ class routes
          $route->controller = 'accountsController';
          $route->method = 'delete';
          $routes[] = $route;
- 
+
          $route = new route();
          $route->http_method = 'GET';
          $route->action = 'edit';
@@ -135,7 +135,7 @@ class routes
          $route->controller = 'accountsController';
          $route->method = 'edit';
          $routes[] = $route;
- 
+
          $route = new route();
          $route->http_method = 'POST';
          $route->action = 'save';
@@ -143,7 +143,7 @@ class routes
          $route->controller = 'accountsController';
          $route->method = 'save';
          $routes[] = $route;
- 
+
          $route = new route();
          $route->http_method = 'GET';
          $route->action = 'register';
@@ -151,7 +151,7 @@ class routes
          $route->controller = 'accountsController';
          $route->method = 'register';
          $routes[] = $route;
- 
+
          $route = new route();
          $route->http_method = 'POST';
          $route->action = 'store';
@@ -159,16 +159,16 @@ class routes
          $route->controller = 'accountsController';
          $route->method = 'store';
          $routes[] = $route;
-         
+
          $route = new route();
          $route->http_method = 'POST';
          $route->action = 'edit';
          $route->page = 'accounts';
          $route->controller = 'accountsController';
          $route->method = 'edit';
-         
+
          $routes[] = $route;
- 
+
         return $routes;
     }
 }

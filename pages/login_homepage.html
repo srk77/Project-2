@@ -40,14 +40,16 @@
       .row.content {height:auto;}
     }
 
-      label{
-      width:100px;
-    }
+    .glyphicon {
+    height:42px;
+    font-size: 18px;
+}
   </style>
 </head>
 
 
 <body>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -60,9 +62,19 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-
       </ul>
+      <ul class="nav navbar-nav navbar-right">
 
+      <li><div>
+        <form action="index.php?page=accounts&action=show" method="POST">
+        <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
+        </form></div></li>
+
+        <li><div>
+        <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
+        </form></div></li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -73,41 +85,10 @@
     </div>
     <div class="col-sm-8 text-center">
 
-<h3>Register</h3>
-<form action="index.php?page=accounts&action=store" method="post" id="form1" class = "form-inline">
-    <div class = "form-group" align="center">
-    <label>First name-</label>
-    <input type="text" class="form-control" name="fname" value=""><br>
-    </div><br><br>
-    <div class = "form-group">
-    <label>Last name-</label>
-    <input type="text" class="form-control" name="lname" value=""><br>
-    </div><br><br>
-    <div class = "form-group">
-    <label>Email ID-</label>
-    <input type="text" class="form-control" name="email" value=""><br>
-    </div><br><br>
-    <div class = "form-group">
-    <label>Phone No-</label>
-    <input type="text" class="form-control" name="phone" value=""><br>
-    </div><br><br>
-    <div class = "form-group">
-    <label>Birthday-</label>
-    <input type="text" class="form-control" name="birthday" value=""><br>
-    </div><br><br>
-    <div class = "form-group">
-    <label>Gender-</label>
-    <input type="text" class="form-control" name="gender" value=""><br>
-    </div><br><br>
-    <div class = "form-group">
-    <label>Password-</label>
-    <input type="password" class="form-control" name="password" value=""><br>
-    </div><br><br>
-    <button type="submit" class="btn btn-primary" form="form1" value="Submit">Submit</button>
-</form>
-
+&nbsp&nbsp&nbsp<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
 </div>
-    <div class="col-sm-2 sidenav">
+
+<div class="col-sm-2 sidenav">
     </div>
   </div>
 </div>
@@ -118,4 +99,3 @@
 
 <script src="js/scripts.js"></script>
 </body>
-</html>
