@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Task manager</title>
+  <title>Manage Task</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +21,7 @@
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+      background-color: #1f314f;
       height: 100%;
     }
 
@@ -70,12 +71,12 @@
 
       <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
-        <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
+        <button type="submit">Profile</button>
         </form></div></li>
 
         <li><div>
         <form action="index.php?page=accounts&action=logout" method="POST">
-        <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
+        <button type="submit">Logout</button>
         </form></div></li>
       </ul>
     </div>
@@ -91,8 +92,8 @@
 
 <?php
 $text='';
-$text.='<h2>Pending Tasks</h2><br>';
-$text.='<a href="index.php?page=tasks&action=create"><span class="glyphicon glyphicon-plus">Create New Task</span></a>';
+$text.='<h2>All Tasks</h2><br>';
+$text.='<a href="index.php?page=tasks&action=create" class="btn btn-primary" style="margin-bottom: 10px;">Create New Task</a>';
 if($data==FALSE){
   $text.='<br>No records found';
   $text.='</center>';
@@ -112,7 +113,7 @@ echo $text;
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+ <!-- <p>Web System Development</p> -->
 </footer>
 
 

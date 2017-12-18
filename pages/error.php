@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Task manager</title>
+  <title>Manage Task</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +21,7 @@
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+      background-color: #1f314f;
       height: 100%;
     }
 
@@ -87,7 +88,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+  <!--<p>Web System Development</p> -->
 </footer>
 
 

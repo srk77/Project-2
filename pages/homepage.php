@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Task manager</title>
+  <title>Manage Task</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -48,9 +49,15 @@
     .btn{
       background-color: #1f314f;
     }
+    .btn-primary{
+      margin-right: 10px;
+      margin-left: 10px;
+
+    }
 
   </style>
 </head>
+
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -75,19 +82,20 @@
 
     <div class="col-sm-8 text-center">
 
-      <h1>Welcome</h1>
-      <p>This is website for managing tasks.</p>
+      <h1>Website to Manage Tasks</h1><br>
+      <!--<h2>Web Systems Development</h2> -->
+     <!-- <p>This is website for managing tasks.</p> -->
       <hr>
       <form action="index.php?page=accounts&action=login" method="POST">
 
       <!--<div class="container">-->
       <!-- <h5><b>Username</b></h5> -->
       <label nmae="uname">Username:</label>
-      <input type="email" placeholder="Enter Username" name="uname" required><br>
+      <input type="email" placeholder="" name="uname" required><br><br>
 
       <!-- <h5><b>Password</b></h5> -->
       <label nmae="psw">Password:</label>
-      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+      <input type="password" placeholder="" name="psw" required><br><br>
 
       <button type="submit" class="btn btn-primary">Login</button>
       <a class="btn btn-primary" href="index.php?page=accounts&action=register">Register</a>
@@ -101,7 +109,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+  <!--<p>Web System Development</p> -->
 </footer>
 
 </body>

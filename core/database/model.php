@@ -21,7 +21,10 @@ abstract class model
     }
     else{
       echo $result;
+      //echo 'in else';
       exit;
+      //http\Controller::getTemplate('error',$result);
+      //exit;
     }
   }
 

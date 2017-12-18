@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Task manager</title>
+  <title>Manage Task</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +21,7 @@
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+      background-color: #1f314f;
       height: 100%;
     }
 
@@ -50,7 +51,6 @@
   </style>
 </head>
 
-
 <body text-align:center>
 
 <nav class="navbar navbar-inverse">
@@ -70,24 +70,25 @@
 
       <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
-        <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
+        <button type="submit">Profile</button>
         </form></div></li>
 
         <li><div>
         <form action="index.php?page=accounts&action=logout" method="POST">
-        <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
+        <button type="submit">Logout</button>
         </form></div></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container-fluid text-center">
+<div class="container-fluid">
   <div class="row content">
     <div class="col-sm-2 sidenav">
     </div>
-    <div class="col-sm-8 text-center">
-    <h3> Details </h3>
+    <div class="col-sm-8">
+    <h3 style="padding-left: 100px;">Details </h3>
+    <hr>
 <form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?>" method="post" class = "form-inline">
 
     <div class = "form-group">
@@ -95,27 +96,27 @@
     <input type="text" class="form-control" name="fname" value="<?php echo $data->fname; ?>"readonly>
     </div><br><br>
 
-    <div class = "form-group" align="center">
+    <div class = "form-group" >
     <label>Last  name-</label>
     <input type="text" class="form-control" name="lname" value="<?php echo $data->lname; ?>"readonly>
     </div><br><br>
 
-    <div class = "form-group" align="center">
+    <div class = "form-group" >
     <label>E-mail  ID-</label>
     <input type="text" class="form-control" name="email" value="<?php echo $data->email; ?>"readonly>
     </div><br><br>
 
-    <div class = "form-group" align="center">
+    <div class = "form-group" >
     <label>Phone No-</label>
     <input type="text" class="form-control" name="phone" value="<?php echo $data->phone; ?>"readonly>
     </div><br><br>
 
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Birthday-</label>
     <input type="text" class="form-control" name="birthday" value="<?php echo $data->birthday; ?>"readonly>
     </div><br><br>
 
-    <div class = "form-group" align="center">
+    <div class = "form-group" >
     <label>Gender-</label>
     <input type="text" class="form-control" name="gender" value="<?php echo $data->gender; ?>"readonly>
     </div>
@@ -139,7 +140,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+  <!--<p>Web System Development</p>-->
 </footer>
 
 

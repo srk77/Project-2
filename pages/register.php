@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Task manager</title>
+  <title>Manage Task</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +21,7 @@
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+      background-color: #1f314f;
       height: 100%;
     }
 
@@ -47,6 +48,7 @@
 </head>
 
 
+
 <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -63,15 +65,16 @@
   </div>
 </nav>
 
-<div class="container-fluid text-center">
+<div class="container-fluid">
   <div class="row content">
     <div class="col-sm-2 sidenav">
     </div>
-    <div class="col-sm-8 text-center">
+    <div class="col-sm-8">
 
-<h3>Register</h3>
+<h3>New User Registration Form</h3><br>
+<hr>
 <form action="index.php?page=accounts&action=store" method="post" id="form1" class = "form-inline">
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>First name-</label>
     <input type="text" class="form-control" name="fname" value="" required><br>
     </div><br><br>
@@ -96,11 +99,11 @@
     <input type="text" class="form-control" name="gender" value=""><br>
     </div><br><br>
     <div class = "form-group">
-    <label>Password-</label>
-    <input type="password" class="form-control" name="password" value="" required><br>
-    </div><br><br>
-    <button type="submit" class="btn btn-primary" form="form1" value="Submit">Submit</button>
-</form>
+        <label>Password-</label>
+        <input type="password" class="form-control" name="password" value="" required><br>
+        </div><br><br>
+        <button type="submit" class="btn btn-primary" form="form1" value="Submit">Login</button>
+    </form>
 
 </div>
     <div class="col-sm-2 sidenav">
@@ -109,7 +112,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+ <!-- <p>Web System Development</p> -->
 </footer>
 
 <script src="js/scripts.js"></script>
