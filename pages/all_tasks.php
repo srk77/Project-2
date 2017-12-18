@@ -92,8 +92,8 @@
 
 <?php
 $text='';
-$text.='<h2>All Tasks</h2><br>';
-$text.='<a href="index.php?page=tasks&action=create" class="btn btn-primary" style="margin-bottom: 10px;">Create New Task</a>';
+$text.='<h1>All Tasks Details</h1><br><hr>';
+$text.='<a href="index.php?page=tasks&action=create" class="btn btn-primary" style="margin-bottom: 10px;">Create New Task</a><br><br>';
 if($data==FALSE){
   $text.='<br>No records found';
   $text.='</center>';

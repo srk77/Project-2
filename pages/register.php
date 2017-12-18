@@ -102,7 +102,7 @@
         <label>Password-</label>
         <input type="password" class="form-control" name="password" value="" required><br>
         </div><br><br>
-        <button type="submit" class="btn btn-primary" form="form1" value="Submit">Login</button>
+        <button type="submit" class="btn btn-primary" form="form1" value="Submit">Register</button>
     </form>
 
 </div>
